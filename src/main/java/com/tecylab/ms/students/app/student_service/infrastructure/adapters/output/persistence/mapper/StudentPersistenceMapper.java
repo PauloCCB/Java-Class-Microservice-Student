@@ -2,9 +2,11 @@ package com.tecylab.ms.students.app.student_service.infrastructure.adapters.outp
 
 import com.tecylab.ms.students.app.student_service.domain.model.Student;
 import com.tecylab.ms.students.app.student_service.infrastructure.adapters.output.persistence.entity.StudentEntity;
+import org.mapstruct.Mapper;
 
 import java.util.List;
 
+@Mapper(componentModel = "spring")
 public interface StudentPersistenceMapper {
 
     StudentEntity toStudentEntity(Student student);
